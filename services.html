@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>services section</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header-section -->
+        <div class="container">
+            <img src="images/logo1.jpg" class="logo">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Project</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle theme"></button>
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </div>
+    
+    <!-- header-section ends here -->
+
+     <!-- services-section -->
+    <section class="services">
+        <div class="service-contents">
+            <h1 class="service-heading">MY SERVICES</h1>
+            <p>
+                At about this time of year, some months after New Year's resolutions have been made and kept, or made and neglected.
+            </p>
+        </div>
+        <div class="service-list">
+            <div class="service"><h3>Web Design</h3><p>"It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult."</p></div>
+            <div class="service"><h3>Web Development</h3><p>If you are an entrepreneur, you know that your success cannot depend on the opinions of others.</p></div>
+            <div class="service"><h3>UI/UX Design</h3><p>Do you want to be even more successful? Learn to love learning and growth.</p></div>
+            <div class="service"><h3>Cybersecurity</h3><p>Hypnosis quit smoking methods maintain caused quite a stir in the medical world over the last two decades.</p></div>
+            <div class="service"><h3>Data Analysis</h3><p>Do you sometimes have the feeling that you're running into the same obstacles over and over again?</p></div>
+            <div class="service"><h3>Graphic Design</h3><p>You've heard the expression, "Just believe it and it will come." Well, technically, that is true.</p></div>
+
+            <div class="service">
+                <h3>Cloud Hosting Showcase (Loruki)</h3>
+                <section class="loruki">
+                    <section class="loruki-cloud loruki-bg-primary loruki-my-2 loruki-py-2">
+                        <div class="loruki-container loruki-grid">
+                            <div class="loruki-text-center">
+                                <h2 class="loruki-lg">Extreme Cloud Hosting</h2>
+                                <p class="loruki-lead loruki-my-1">Cloud hosting like you've never seen. Fast, efficient and scalable</p>
+                                <a href="Loruki/features.html" class="loruki-btn loruki-btn-dark">Read More</a>
+                            </div>
+                            <img src="Loruki/images/cloud.jpg" alt="" height="170" width="100%" loading="lazy" decoding="async">
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+            <div class="service">
+                <h3>Acrylic Painting Gallery</h3>
+                <section class="acrylic-gallery">
+                    <main class="acrylic-container">
+                        <section class="acrylic-card">
+                            <img src="Acrylic%20Painting/images/paint1.png" alt="" style="width: 100%; height: auto;" loading="lazy" decoding="async">
+                            <div>
+                                <h3>Acrylic Painting One</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos omnis beatae error facere dolorem autem illo ut quod! Beatae cupiditate, ratione iure fugiat vel cum!</p>
+                                <a href="Acrylic%20Painting/index.html" class="acrylic-btn">Buy Now</a>
+                            </div>
+                        </section>
+                    </main>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- service-section ends here -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.classList.toggle('dark', savedTheme === 'dark');
+            const menuButton = document.querySelector(".menu");
+            const navbar = document.querySelector(".navbar");
+            
+            if (menuButton && navbar) {
+                menuButton.addEventListener("click", function() {
+                    navbar.classList.toggle("active");
+                    const isOpen = navbar.classList.contains('active');
+                    menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+                    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+
+            const themeBtn = document.querySelector('.theme-toggle');
+            if (themeBtn) {
+                themeBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                themeBtn.addEventListener('click', function(){
+                    const isDark = document.body.classList.contains('dark');
+                    const next = isDark ? 'light' : 'dark';
+                    document.body.classList.toggle('dark', next === 'dark');
+                    localStorage.setItem('theme', next);
+                    themeBtn.innerHTML = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                });
+            }
+        });
+    </script> 
+</body>
+</html>
+

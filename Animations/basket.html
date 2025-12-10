@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/basket.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvw1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <title>Basket Example</title>
+</head>
+<body class="basket">
+    <header>
+        <h1>Sport Clothing</h1>
+        <div class="basket-icon"><img src="images/basket.png" width="65px;"></div>
+    </header>
+    <ul class="products">
+        <li>
+            <img src="images/j1.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="images/j2.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="images/j4.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="images/j1.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="images/j2.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="images/j4.jpg">
+            <h2>Green T-Shirt</h2>
+            <h3>$20</h3>
+            <button>Add to Basket</button>
+        </li>
+    </ul>
+    
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.products button').click(function() {
+                var product = $(this).closest('li');
+                var productName = product.find('h2').text();
+                var productPrice = product.find('h3').text();
+                
+                alert(productName + ' has been added to your basket for ' + productPrice);
+            });
+        });
+    </script>
+</body>
+</html>

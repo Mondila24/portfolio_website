@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otete Monday - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header-section -->
+    <header>
+        <div class="container">
+            <img src="images/logo1.jpg" class="logo">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Project</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle theme"></button>
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </div>
+     <!-- about-section -->
+    <section class="about">
+        <div class="image">
+            <img src="images/mandela1.jpg" alt="Otete Monday">
+        </div>
+        <div class="content">
+            <h2>ABOUT ME</h2>
+            <h1 class="content-heading">Personal Details</h1>
+            <p class="about-paragraph">
+                I'm a web developer with a passion for creating exceptional digital experiences. With few months experience in the industry. And when I'm not coding, you can find me doing other hobbies like watching football and playing video games.
+            </p>
+            <a href="#" class="btn2">VIEW FULL DETAILS</a>
+        </div>
+    </section>
+    <!-- about-section ends here -->
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.classList.toggle('dark', savedTheme === 'dark');
+            const menuButton = document.querySelector(".menu");
+            const navbar = document.querySelector(".navbar");
+            
+            if (menuButton && navbar) {
+                menuButton.addEventListener("click", function() {
+                    navbar.classList.toggle("active");
+                    const isOpen = navbar.classList.contains('active');
+                    menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+                    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+
+            const themeBtn = document.querySelector('.theme-toggle');
+            if (themeBtn) {
+                themeBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                themeBtn.addEventListener('click', function(){
+                    const isDark = document.body.classList.contains('dark');
+                    const next = isDark ? 'light' : 'dark';
+                    document.body.classList.toggle('dark', next === 'dark');
+                    localStorage.setItem('theme', next);
+                    themeBtn.innerHTML = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

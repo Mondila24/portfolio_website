@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Grocery Bud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site-bar.css">
+<body>
+    <div class="site-bar"><img src="../images/logo1.jpg" alt="Logo" class="logo"><nav class="navbar"><ul class="nav-list"><li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="../about.html">About</a></li><li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li><li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="../contacts.html">Contact</a></li></ul><div class="menu" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></div></nav></div>
+    <section class="section-center">
+        <!-- form -->
+         <form class="grocery-form">
+          <p class="alert"></p>
+          <h3>grocery bud</h3>
+          <div class="form-control">
+            <input type="text" id="grocery" placeholder="e.g. eggs">
+            <button type="submit" class="submit-btn">submit</button>
+          </div>
+        </form>
+        <!-- list -->
+        <div class="grocery-container">
+            <div class="grocery-list">
+                
+            </div>
+            <button type="button" class="clear-btn">clear items</button>
+        </div>
+    </section>   
+    <script src="app.js"></script>
+    <script src="../js/site-bar.js"></script>
+</body>
+</html>

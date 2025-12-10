@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ffffff;
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.posts {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.post {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.post h2 {
+    margin: 0 0 10px;
+}
+
+.post p {
+    color: #555;
+}

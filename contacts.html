@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Otete Monday</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header-section -->
+    <header>
+        <div class="container">
+            <img src="images/logo1.jpg" class="logo">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Project</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle theme"></button>
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+    <!-- header-section ends here -->
+
+    <!-- contact-section -->
+    <section class="contact-section">
+        <h1 class="contact-main-heading">GET IN TOUCH</h1>
+        <p class="contact-intro">I'd love to hear from you! Whether you have a question or just want to say hi, feel free to drop a message.</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info-box">
+                <h2 class="info-title">Contact Details</h2>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>otete.monday@example.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p>+234 806 930 9405</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Location</h3>
+                        <p>Nigeria</p>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="http://wa.me/2348069309405" class="social-icon whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mon_dila?igsh=MWJsNG11eXExdTRxag%3D%3D&utm_source=qr" class="social-icon instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/monday-otete-280ba0344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-icon linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2 class="form-title">Send Me a Message</h2>
+                
+                <!-- Success Message (hidden by default) -->
+                <div id="success-message" style="display: none; margin-bottom: 20px; padding: 20px; background: #4CAF50; color: white; border-radius: 8px; text-align: center;">
+                    <i class="fa-solid fa-check-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h3 style="margin: 10px 0;">Message Sent Successfully!</h3>
+                    <p style="margin: 0;">Thank you for reaching out! I'll get back to you as soon as possible.</p>
+                </div>
+                
+                <!-- Contact Form -->
+                <form action="https://formsubmit.co/otetemonday@gmail.com" method="POST" class="contact-form" id="contactForm">
+                    <!-- FormSubmit Configuration - Remove _next to stay on same page -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- This makes the form redirect back to contacts.html after submission -->
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn" id="submitBtn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contact-section ends here -->
+
+    <!-- footer-section -->
+    <div class="footer">
+        <div class="footer-about">
+            <h3 class="footer-heading">About Me</h3>
+            <p class="footer-p1">
+                You can get more informations on what we do via our social medias below...<br>
+                <a href="http://wa.me/2348069309405"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mon_dila?igsh=MWJsNG11eXExdTRxag%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/monday-otete-280ba0344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+            </p>
+
+            <p class="footer-p2">
+                Copyright &copy; 2025 All rights reserved<br><span>This webpage is made with</span> ❤️ by <a href="#" style="color: lightblue;">Mandela</a>
+            </p>
+        </div>
+        <div class="newsletter">
+            <h3 class="newsletter-heading">Newsletter</h3>
+            <p class="newsletter-paragraph">Stay updated with our latest trends</p>
+            <input type="email" placeholder="Enter Email Address"><button>&rarr;</button>
+        </div>
+    </div>
+    <!-- footer-section ends here -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.classList.toggle('dark', savedTheme === 'dark');
+            const menuButton = document.querySelector(".menu");
+            const navbar = document.querySelector(".navbar");
+
+            if (menuButton && navbar) {
+                menuButton.addEventListener("click", function() {
+                    navbar.classList.toggle("active");
+                    const isOpen = navbar.classList.contains('active');
+                    menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+                    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+
+            // Handle form submission with visual feedback
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // Change button text to show loading state
+                    submitBtn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
+                    submitBtn.disabled = true;
+                    
+                    // Store form submission in localStorage so we can show success message after redirect
+                    localStorage.setItem('formSubmitted', 'true');
+                });
+            }
+            
+            // Check if form was just submitted (after page reload from FormSubmit)
+            if (localStorage.getItem('formSubmitted') === 'true') {
+                // Show success message
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('contactForm').style.display = 'none';
+                
+                // Clear the flag
+                localStorage.removeItem('formSubmitted');
+                
+                // Scroll to success message
+                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form after 5 seconds
+                setTimeout(function() {
+                    document.getElementById('success-message').style.display = 'none';
+                    document.getElementById('contactForm').style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                }, 5000);
+            }
+            const themeBtn = document.querySelector('.theme-toggle');
+            if (themeBtn) {
+                themeBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                themeBtn.addEventListener('click', function(){
+                    const isDark = document.body.classList.contains('dark');
+                    const next = isDark ? 'light' : 'dark';
+                    document.body.classList.toggle('dark', next === 'dark');
+                    localStorage.setItem('theme', next);
+                    themeBtn.innerHTML = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

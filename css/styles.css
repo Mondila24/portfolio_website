@@ -399,6 +399,40 @@ h1{
 .newsletter button {
     padding: 10px;
 }
+.social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #333;
+    transition: transform .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.social-icons .social-icon:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.social-icons .social-icon.whatsapp:hover {
+    color: #25D366;
+}
+.social-icons .social-icon.instagram:hover {
+    color: #E1306C;
+}
+.social-icons .social-icon.linkedin:hover {
+    color: #0A66C2;
+}
+.footer a i {
+    transition: transform .2s ease, color .2s ease;
+}
+.footer a:hover i {
+    transform: translateY(-2px) scale(1.1);
+}
 
 .theme-toggle{ background: transparent; border: 1px solid var(--text); color: var(--text); padding: 6px 12px; border-radius: 20px; cursor: pointer; transition: all .2s ease; margin-left: 12px; }
 .theme-toggle:hover{ transform: translateY(-2px); }
